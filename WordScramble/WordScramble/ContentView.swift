@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var userScore = 0
     
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -25,6 +26,15 @@ struct ContentView: View {
                 }
                 
                 Section {
+                    HStack {
+                        Text("Score")
+                        Spacer()
+                        Text(userScore.formatted())
+                    }
+                    
+                }
+                
+                Section {
                     ForEach(usedWords, id: \.self) { word in
                         HStack{
                             Image(systemName: "\(word.count).circle")
@@ -36,6 +46,12 @@ struct ContentView: View {
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
+            .toolbar {
+                Button(
+                    "New Word",
+                    action: startGame
+                )
+            }
             .alert(errorTitle, isPresented: $showingError) { } message: {
                 Text(errorMessage)
             }
@@ -48,6 +64,11 @@ struct ContentView: View {
             .trimmingCharacters(in: .whitespacesAndNewlines)
         
         guard answer.count > 0 else { return }
+        
+        guard answer.count > 2 else {
+            wordError(title: "Word too short", message: "Answer should be longer than 3 letters")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be original")
@@ -66,7 +87,9 @@ struct ContentView: View {
         
         withAnimation {
             usedWords.insert(answer, at: 0)
+            userScore += answer.count
         }
+        
         newWord = ""
     }
     
@@ -74,6 +97,8 @@ struct ContentView: View {
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
+                userScore = 0
+                usedWords.removeAll()
                 rootWord = allWords.randomElement() ?? "silkworm"
                 return
             }
