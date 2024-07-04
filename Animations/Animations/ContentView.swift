@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var animationAmount = 1.0
     @State private var animationAmount2 = 1.0
     @State private var animationAmount3 = 1.0
+    @State private var enabled = false
     
     var body: some View {
         print(animationAmount2)
@@ -66,6 +67,18 @@ struct ContentView: View {
                 .degrees(animationAmount3),
                 axis: (x: 0.0, y: 0.1, z: 1.0)
             )
+            
+            Spacer()
+            
+            Button("Tap Me") {
+                enabled.toggle()
+            }
+            .frame(width: 200, height: 200)
+            .background(enabled ? .blue : .red)
+            .foregroundStyle(.white)
+            .animation(.default, value: enabled)
+            .clipShape(.rect(cornerRadius: enabled ? 60 : 0))
+            .animation(.spring(duration: 1, bounce: 0.65), value: enabled)
         }
     }
 }
