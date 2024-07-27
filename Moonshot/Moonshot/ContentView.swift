@@ -11,14 +11,40 @@ struct ContentView: View {
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
     
+    let columns = [
+        GridItem(.adaptive(minimum: 150))
+    ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationStack(
+            root: {
+                ScrollView(content: {
+                    LazyVGrid(columns: columns, content: {
+                        ForEach(missions) { mission in
+                            NavigationLink(destination: {
+                                Text("Detail View")
+                            }, label: {
+                                VStack(content: {
+                                    Image(mission.image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 100, height: 100)
+                                })
+                                VStack {
+                                    Text(mission.displayName)
+                                        .font(.headline)
+                                    
+                                    Text(mission.launchDate ?? "N/A")
+                                        .font(.caption)
+                                }
+                                .frame(maxWidth: .infinity)
+                            })
+                        }
+                    })
+                }) 
+                .navigationTitle("Moonshot")
+            }
+        )
     }
 }
 
