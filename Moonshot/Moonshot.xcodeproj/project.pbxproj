@@ -15,6 +15,7 @@
 		263DCA762C5513FB00E76EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263DCA752C5513FB00E76EA4 /* Assets.xcassets */; };
 		263DCA782C55145900E76EA4 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DCA772C55145900E76EA4 /* Astronaut.swift */; };
 		263DCA7A2C5514AB00E76EA4 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DCA792C5514AB00E76EA4 /* Bundle-Decodable.swift */; };
+		263DCA7C2C55183B00E76EA4 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DCA7B2C55183B00E76EA4 /* Mission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		263DCA752C5513FB00E76EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263DCA772C55145900E76EA4 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		263DCA792C5514AB00E76EA4 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		263DCA7B2C55183B00E76EA4 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				263DCA712C55136C00E76EA4 /* missions.json */,
 				263DCA682C462BBE00E76EA4 /* Moonshot.entitlements */,
 				263DCA692C462BBE00E76EA4 /* Preview Content */,
+				263DCA7B2C55183B00E76EA4 /* Mission.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				263DCA782C55145900E76EA4 /* Astronaut.swift in Sources */,
 				263DCA652C462BBD00E76EA4 /* ContentView.swift in Sources */,
 				263DCA632C462BBD00E76EA4 /* MoonshotApp.swift in Sources */,
+				263DCA7C2C55183B00E76EA4 /* Mission.swift in Sources */,
 				263DCA7A2C5514AB00E76EA4 /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
