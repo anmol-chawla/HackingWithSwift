@@ -48,6 +48,10 @@ struct MissionView: View {
                         { width, axis in width * 0.6}
                     )
                 
+                Text(mission.formattedLaunchDate)
+                    .font(.subheadline.bold())
+                    .padding(.top)
+                
                 VStack(alignment: .leading, content: {
                     CustomDivider()
                     
