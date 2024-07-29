@@ -11,6 +11,7 @@
 		26D523C22C5750450088E4CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D523C12C5750450088E4CB /* ContentView.swift */; };
 		26D523C42C5750460088E4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D523C32C5750460088E4CB /* Assets.xcassets */; };
 		26D523C72C5750460088E4CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D523C62C5750460088E4CB /* Preview Assets.xcassets */; };
+		26D523CE2C57539F0088E4CB /* ProgrammaticNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D523CD2C57539F0088E4CB /* ProgrammaticNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		26D523C12C5750450088E4CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		26D523C32C5750460088E4CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26D523C62C5750460088E4CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26D523CD2C57539F0088E4CB /* ProgrammaticNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				26D523BF2C5750450088E4CB /* NavigationApp.swift */,
 				26D523C12C5750450088E4CB /* ContentView.swift */,
+				26D523CD2C57539F0088E4CB /* ProgrammaticNavigation.swift */,
 				26D523C32C5750460088E4CB /* Assets.xcassets */,
 				26D523C52C5750460088E4CB /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D523C22C5750450088E4CB /* ContentView.swift in Sources */,
+				26D523CE2C57539F0088E4CB /* ProgrammaticNavigation.swift in Sources */,
 				26D523C02C5750450088E4CB /* NavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
