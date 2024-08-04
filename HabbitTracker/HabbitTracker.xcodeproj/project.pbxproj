@@ -12,6 +12,7 @@
 		26D473302C5FC9CA005663EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D4732F2C5FC9CA005663EF /* Assets.xcassets */; };
 		26D473332C5FC9CA005663EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D473322C5FC9CA005663EF /* Preview Assets.xcassets */; };
 		26D4733A2C5FCA21005663EF /* Habbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D473392C5FCA21005663EF /* Habbit.swift */; };
+		26D4733C2C5FCB78005663EF /* TrackedHabbits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4733B2C5FCB78005663EF /* TrackedHabbits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		26D4732F2C5FC9CA005663EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26D473322C5FC9CA005663EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26D473392C5FCA21005663EF /* Habbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habbit.swift; sourceTree = "<group>"; };
+		26D4733B2C5FCB78005663EF /* TrackedHabbits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedHabbits.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				26D4732B2C5FC9C9005663EF /* HabbitTrackerApp.swift */,
 				26D4732D2C5FC9C9005663EF /* ContentView.swift */,
 				26D473392C5FCA21005663EF /* Habbit.swift */,
+				26D4733B2C5FCB78005663EF /* TrackedHabbits.swift */,
 				26D4732F2C5FC9CA005663EF /* Assets.xcassets */,
 				26D473312C5FC9CA005663EF /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				26D4733A2C5FCA21005663EF /* Habbit.swift in Sources */,
 				26D4732E2C5FC9C9005663EF /* ContentView.swift in Sources */,
+				26D4733C2C5FCB78005663EF /* TrackedHabbits.swift in Sources */,
 				26D4732C2C5FC9C9005663EF /* HabbitTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
