@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var trackedHabbits: TrackedHabbits = TrackedHabbits()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+       NavigationStack(root: {
+           List(content: {
+               ForEach(trackedHabbits.habbits) { habbit in
+                   NavigationLink(destination: {
+                       Text(habbit.description)
+                   }, label: {
+                       Text(habbit.name)
+                   })
+               }
+           })
+           .navigationTitle("Habbits")
+           .toolbar(content: {
+               ToolbarItemGroup(placement: .bottomBar, content: {
+                       Button(action: {
+                           print("")
+                       }, label: {
+                           Image(systemName: "plus.circle.fill")
+                               .padding(.leastNonzeroMagnitude)
+                           Text("New Habbit")
+                   })
+                   Spacer()
+               })
+           })
+       })
     }
 }
 

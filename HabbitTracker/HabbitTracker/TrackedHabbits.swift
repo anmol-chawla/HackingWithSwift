@@ -25,6 +25,6 @@ class TrackedHabbits: Codable {
                 return
             }
         }
-        habbits = []
+        habbits = [Habbit(name: "Test", description: "Test description", count: 5)]
     }
 }
