@@ -16,7 +16,7 @@ struct ContentView: View {
            List(content: {
                ForEach(trackedHabbits.habbits) { habbit in
                    NavigationLink(destination: {
-                       Text(habbit.description)
+                       HabitView(trackedHabbits: $trackedHabbits, habbit: habbit)
                    }, label: {
                        Text(habbit.name)
                    })

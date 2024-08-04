@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Habbit: Codable, Identifiable {
+struct Habbit: Codable, Equatable, Identifiable {
     var id: UUID = UUID()
     let name: String
     let description: String
-    let count: Int
+    var count: Int
 }
