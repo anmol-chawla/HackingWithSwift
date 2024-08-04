@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAddSheet: Bool = false
     @State private var trackedHabbits: TrackedHabbits = TrackedHabbits()
     
     var body: some View {
@@ -24,15 +25,15 @@ struct ContentView: View {
            .navigationTitle("Habbits")
            .toolbar(content: {
                ToolbarItemGroup(placement: .bottomBar, content: {
-                       Button(action: {
-                           print("")
-                       }, label: {
-                           Image(systemName: "plus.circle.fill")
-                               .padding(.leastNonzeroMagnitude)
-                           Text("New Habbit")
+                   Button("New Habbit", systemImage: "plus.circle.fill", action: {
+                       showAddSheet.toggle()
                    })
+                   .labelStyle(.titleAndIcon)
                    Spacer()
                })
+           })
+           .sheet(isPresented: $showAddSheet, content: {
+              NewHabbit(trackedHabbits: trackedHabbits)
            })
        })
     }
