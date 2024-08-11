@@ -29,4 +29,32 @@ class Order {
     var streetAddress = ""
     var city = ""
     var zip = ""
+    
+    var hasValidAddress: Bool {
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+            return false
+        }
+        
+        return true
+    }
+    
+    var cost: Decimal {
+        // $2 per cake
+        var cost = Decimal(quantity) * 2
+        
+        // complicated cakes cost more
+        cost += Decimal(type) / 2
+        
+        // $1/cake for frosting
+        if extraFrosting {
+            cost += Decimal (quantity)
+        }
+
+        // $0.50/cake for sprinkles
+        if addSprinkles {
+            cost += Decimal(quantity)/2
+        }
+        
+        return cost
+    }
 }
