@@ -13,6 +13,9 @@ struct CheckoutView: View {
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
     
+    @State private var errorMessage = ""
+    @State private var showingErrorMessage = false
+    
     var body: some View {
         ScrollView(content: {
             VStack(content: {
@@ -54,6 +57,20 @@ struct CheckoutView: View {
                 Text(confirmationMessage)
             }
         )
+        .alert(
+            "Error!",
+            isPresented: $showingErrorMessage,
+            actions: {
+                Button("Retry") {
+                    Task(operation: {
+                        await placeOrder()
+                    })
+                }
+            },
+            message: {
+                Text(errorMessage)
+            }
+        )
     }
     
     func placeOrder() async {
@@ -75,6 +92,8 @@ struct CheckoutView: View {
             showingConfirmation = true
         } catch {
             print("Checkout failed: \(error.localizedDescription)")
+            errorMessage = "Checkout Failed. Please retry"
+            showingErrorMessage = true
         }
     }
 }
