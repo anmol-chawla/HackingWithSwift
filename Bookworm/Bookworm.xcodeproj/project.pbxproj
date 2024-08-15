@@ -11,6 +11,8 @@
 		269C6F5B2C6B1A310048D5D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C6F5A2C6B1A310048D5D5 /* ContentView.swift */; };
 		269C6F5D2C6B1A320048D5D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269C6F5C2C6B1A320048D5D5 /* Assets.xcassets */; };
 		269C6F602C6B1A320048D5D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269C6F5F2C6B1A320048D5D5 /* Preview Assets.xcassets */; };
+		269C6F692C6DDA2B0048D5D5 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C6F682C6DDA2B0048D5D5 /* Book.swift */; };
+		269C6F6B2C6DDAB20048D5D5 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C6F6A2C6DDAB20048D5D5 /* AddBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		269C6F5A2C6B1A310048D5D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		269C6F5C2C6B1A320048D5D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		269C6F5F2C6B1A320048D5D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		269C6F682C6DDA2B0048D5D5 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		269C6F6A2C6DDAB20048D5D5 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				269C6F582C6B1A310048D5D5 /* BookwormApp.swift */,
+				269C6F682C6DDA2B0048D5D5 /* Book.swift */,
 				269C6F5A2C6B1A310048D5D5 /* ContentView.swift */,
+				269C6F6A2C6DDAB20048D5D5 /* AddBookView.swift */,
 				269C6F5C2C6B1A320048D5D5 /* Assets.xcassets */,
 				269C6F5E2C6B1A320048D5D5 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				269C6F5B2C6B1A310048D5D5 /* ContentView.swift in Sources */,
 				269C6F592C6B1A310048D5D5 /* BookwormApp.swift in Sources */,
+				269C6F692C6DDA2B0048D5D5 /* Book.swift in Sources */,
+				269C6F6B2C6DDAB20048D5D5 /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
