@@ -67,8 +67,8 @@
 				269C6F6E2C6F79C00048D5D5 /* EmojiRatingView.swift */,
 				269C6F6C2C6F74B00048D5D5 /* RatingView.swift */,
 				269C6F6A2C6DDAB20048D5D5 /* AddBookView.swift */,
-				269C6F5C2C6B1A320048D5D5 /* Assets.xcassets */,
 				269C6F702C6F7C4F0048D5D5 /* DetailView.swift */,
+				269C6F5C2C6B1A320048D5D5 /* Assets.xcassets */,
 				269C6F5E2C6B1A320048D5D5 /* Preview Content */,
 			);
 			path = Bookworm;
