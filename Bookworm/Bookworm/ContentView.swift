@@ -35,7 +35,10 @@ struct ContentView: View {
                 })
             })
             .navigationTitle("Bookworm")
-                .toolbar(content: {
+            .navigationDestination(for: Book.self , destination: { book in
+                DetailView(book: book)
+            })
+            .toolbar(content: {
                     ToolbarItem(placement: .topBarTrailing, content: {
                         Button(
                             "Add Book",
