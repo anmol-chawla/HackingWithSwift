@@ -14,11 +14,28 @@ struct AddBookView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = "Fantasy"
+    @State private var genre = BookGenres.Fantasy
     @State private var review = ""
     
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
-    
+    private var containsInvalidEntries: Bool {
+        if (title.isEmpty || author.isEmpty) {
+            print ("in title")
+            return true
+        }
+        
+        if (!BookGenres.allCases.contains(genre)) {
+            print("in generes")
+            return true
+        }
+        
+        if (!(1...5 ~= rating)) {
+            return true
+        }
+        
+        print("is valid")
+        return false
+    }
+        
     var body: some View {
         NavigationStack(root: {
             Form(content: {
@@ -27,8 +44,8 @@ struct AddBookView: View {
                     TextField("Author's name", text: $author)
                     
                     Picker("Genre", selection: $genre, content: {
-                        ForEach(genres, id: \.self, content: {
-                            Text($0)
+                        ForEach(BookGenres.allCases, id: \.self, content: {
+                            Text($0.rawValue)
                         })
                     })
                 })
@@ -43,7 +60,7 @@ struct AddBookView: View {
                         let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
                         modelContext.insert(newBook)
                         dismiss()
-                    })
+                    }).disabled(containsInvalidEntries)
                 })
             })
             .navigationTitle("Add Book")

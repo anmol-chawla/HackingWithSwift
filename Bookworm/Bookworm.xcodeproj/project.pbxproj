@@ -16,6 +16,7 @@
 		269C6F6D2C6F74B00048D5D5 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C6F6C2C6F74B00048D5D5 /* RatingView.swift */; };
 		269C6F6F2C6F79C00048D5D5 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C6F6E2C6F79C00048D5D5 /* EmojiRatingView.swift */; };
 		269C6F712C6F7C4F0048D5D5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C6F702C6F7C4F0048D5D5 /* DetailView.swift */; };
+		269C6F732C7094E20048D5D5 /* BookGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C6F722C7094E20048D5D5 /* BookGenres.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		269C6F6C2C6F74B00048D5D5 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		269C6F6E2C6F79C00048D5D5 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 		269C6F702C6F7C4F0048D5D5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		269C6F722C7094E20048D5D5 /* BookGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookGenres.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				269C6F582C6B1A310048D5D5 /* BookwormApp.swift */,
 				269C6F682C6DDA2B0048D5D5 /* Book.swift */,
+				269C6F722C7094E20048D5D5 /* BookGenres.swift */,
 				269C6F5A2C6B1A310048D5D5 /* ContentView.swift */,
 				269C6F6E2C6F79C00048D5D5 /* EmojiRatingView.swift */,
 				269C6F6C2C6F74B00048D5D5 /* RatingView.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				269C6F5B2C6B1A310048D5D5 /* ContentView.swift in Sources */,
 				269C6F592C6B1A310048D5D5 /* BookwormApp.swift in Sources */,
+				269C6F732C7094E20048D5D5 /* BookGenres.swift in Sources */,
 				269C6F692C6DDA2B0048D5D5 /* Book.swift in Sources */,
 				269C6F712C6F7C4F0048D5D5 /* DetailView.swift in Sources */,
 				269C6F6D2C6F74B00048D5D5 /* RatingView.swift in Sources */,
