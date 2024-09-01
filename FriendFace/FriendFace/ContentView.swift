@@ -20,8 +20,18 @@ struct ContentView: View {
                     NavigationLink(destination: {
                         Text(user.about)
                     }, label: {
-                        VStack(content: {
-                            Text(user.name)
+                        HStack(content: {
+                            Circle()
+                                .frame(width: 10)
+                                .foregroundStyle( user.isActive ? .green : .red)
+                            
+                            VStack(alignment: .leading, content: {
+                                Text(user.name)
+                                
+                                Text(user.company)
+                                    .font(.caption)
+                                
+                            })
                         })
                     })
                 })
