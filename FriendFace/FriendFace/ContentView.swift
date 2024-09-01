@@ -18,7 +18,7 @@ struct ContentView: View {
             List(content: {
                 ForEach(users, content: { user in
                     NavigationLink(destination: {
-                        Text(user.about)
+                        UserDetails(user: user, allUsers: users)
                     }, label: {
                         HStack(content: {
                             Circle()
