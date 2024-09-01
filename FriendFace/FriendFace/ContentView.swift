@@ -59,23 +59,25 @@ struct ContentView: View {
     }
     
     func fetchUsers() async {
-        let userListURL = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
-        
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        var request = URLRequest(url: userListURL)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-        
-        do {
-            let (data, _) = try await URLSession.shared.data(for: request)
-            let decodedUsers = try decoder.decode([User].self, from: data)
-            users = decodedUsers
+        if (users.isEmpty) {
+            let userListURL = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
             
-        } catch {
-            print("User fetch failed: \(error)")
-            errorMessage = "Failed to fetch users. Please retry"
-            showingError = true
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            var request = URLRequest(url: userListURL)
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpMethod = "GET"
+            
+            do {
+                let (data, _) = try await URLSession.shared.data(for: request)
+                let decodedUsers = try decoder.decode([User].self, from: data)
+                users = decodedUsers
+                
+            } catch {
+                print("User fetch failed: \(error)")
+                errorMessage = "Failed to fetch users. Please retry"
+                showingError = true
+            }
         }
     }
 }
