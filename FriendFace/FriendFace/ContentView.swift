@@ -5,9 +5,12 @@
 //  Created by Anmol Chawla on 01/09/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
+    
     @State private var users: [User] = [User]()
     
     @State private var showingError: Bool = false
@@ -72,6 +75,10 @@ struct ContentView: View {
                 let (data, _) = try await URLSession.shared.data(for: request)
                 let decodedUsers = try decoder.decode([User].self, from: data)
                 users = decodedUsers
+                
+                for user in users {
+                    modelContext.insert(user)
+                }
                 
             } catch {
                 print("User fetch failed: \(error)")
