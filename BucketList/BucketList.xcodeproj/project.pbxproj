@@ -11,6 +11,9 @@
 		266156752C8AC2A2002BAF2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266156742C8AC2A2002BAF2B /* ContentView.swift */; };
 		266156772C8AC2A3002BAF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266156762C8AC2A3002BAF2B /* Assets.xcassets */; };
 		2661567A2C8AC2A3002BAF2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266156792C8AC2A3002BAF2B /* Preview Assets.xcassets */; };
+		266E10CE2C93F857005C1B40 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E10CD2C93F857005C1B40 /* Location.swift */; };
+		266E10D02C97E9EB005C1B40 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E10CF2C97E9EB005C1B40 /* EditView.swift */; };
+		26BC2A8B2C993D4800C1DD3D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BC2A8A2C993D4800C1DD3D /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		266156742C8AC2A2002BAF2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		266156762C8AC2A3002BAF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		266156792C8AC2A3002BAF2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		266E10CD2C93F857005C1B40 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		266E10CF2C97E9EB005C1B40 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		26BC2A8A2C993D4800C1DD3D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				266156722C8AC2A2002BAF2B /* BucketListApp.swift */,
 				266156742C8AC2A2002BAF2B /* ContentView.swift */,
+				266E10CF2C97E9EB005C1B40 /* EditView.swift */,
+				26BC2A8A2C993D4800C1DD3D /* Result.swift */,
+				266E10CD2C93F857005C1B40 /* Location.swift */,
 				266156762C8AC2A3002BAF2B /* Assets.xcassets */,
 				266156782C8AC2A3002BAF2B /* Preview Content */,
 			);
@@ -138,6 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				266156752C8AC2A2002BAF2B /* ContentView.swift in Sources */,
+				26BC2A8B2C993D4800C1DD3D /* Result.swift in Sources */,
+				266E10CE2C93F857005C1B40 /* Location.swift in Sources */,
+				266E10D02C97E9EB005C1B40 /* EditView.swift in Sources */,
 				266156732C8AC2A2002BAF2B /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +287,7 @@
 				DEVELOPMENT_TEAM = R632V8N99W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +317,7 @@
 				DEVELOPMENT_TEAM = R632V8N99W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
