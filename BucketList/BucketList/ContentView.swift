@@ -16,15 +16,14 @@ struct ContentView: View {
         )
     )
     
-    @State private var locations = [Location]()
-    @State private var selectedLocation: Location?
+    @State private var viewModel = ViewModel()
     
     var body: some View {
         MapReader { proxy in
             Map(
                 initialPosition: startPosition
             ) {
-                ForEach(locations) { location in
+                ForEach(viewModel.locations) { location in
                     Annotation(
                         location.name,
                         coordinate: location.coordinate
@@ -36,29 +35,20 @@ struct ContentView: View {
                             .background(.white)
                             .clipShape(.circle)
                             .onLongPressGesture {
-                                selectedLocation = location
+                                viewModel.selectedLocation = location
                             }
                     }
                 }
             }
             .onTapGesture { position in
                 if let coordinate = proxy.convert(position, from: .local) {
-                    let newLocation  = Location(
-                        id: UUID(),
-                        name: "New Location",
-                        description: "",
-                        latitude: coordinate.latitude,
-                        longitude: coordinate.longitude
-                    )
-                    locations.append(newLocation)
+                    viewModel.addLocation(at: coordinate)
                 }
             }
         }
-        .sheet(item: $selectedLocation) { place in
+        .sheet(item: $viewModel.selectedLocation) { place in
             EditView(location: place) { newLocation in
-                if let index = locations.firstIndex(of: place) {
-                    locations[index] = newLocation
-                }
+                viewModel.updateLocation(location: newLocation)
             }
         }
     }
