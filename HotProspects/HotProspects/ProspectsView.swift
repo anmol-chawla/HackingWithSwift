@@ -5,6 +5,7 @@
 //  Created by Anmol Chawla on 01/10/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ProspectsView: View {
@@ -13,6 +14,9 @@ struct ProspectsView: View {
         case contacted
         case uncontacted
     }
+    
+    @Environment(\.modelContext) var modelContext
+    @Query(sort: \Prospect.name) var prospects: [Prospect]
     
     let filter: FilterType
     
@@ -29,12 +33,20 @@ struct ProspectsView: View {
     
     var body: some View {
         NavigationStack {
-            Text("Hello world")
+            Text("People: \(prospects.count)")
                 .navigationTitle(title)
+                .toolbar {
+                    Button("Scan", systemImage: "qrcode.viewfinder") {
+                        let prospect = Prospect(name: "Anmol Chawla", emailAdress: "an.chawla@icloud.com", isContacted: false)
+                        modelContext.insert(prospect)
+                    }
+                }
+        
         }
     }
 }
 
 #Preview {
     ProspectsView(filter: .none)
+        .modelContainer(for: Prospect.self)
 }
