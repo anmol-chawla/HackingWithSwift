@@ -35,4 +35,8 @@ struct Resort: Codable, Hashable, Identifiable {
     var priceText: String {
         String(repeating: "$", count: price)
     }
+    
+    var facilityTypes: [Facility] {
+        facilities.map(Facility.init)
+    }
 }
