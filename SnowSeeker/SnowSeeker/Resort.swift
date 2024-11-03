@@ -22,4 +22,17 @@ struct Resort: Codable, Hashable, Identifiable {
     
     static let allResorts: [Resort] = Bundle.main.decode("resorts.json")
     static let example = allResorts[0]
+    
+    var sizeText: String {
+        switch size {
+        case 1: "Small"
+        case 2: "Average"
+        case 3: "Large"
+        default: "Large"
+        }
+    }
+    
+    var priceText: String {
+        String(repeating: "$", count: price)
+    }
 }
